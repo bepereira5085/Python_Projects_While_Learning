@@ -1,7 +1,7 @@
 print('')
 print('CALCULADORA RAPIDEX')
 print('')
-print('Caso deseje sair, digite "sair"')
+print('Caso deseje sair, digite "sair" a qualquer momento')
 print('')
 while True:
     N1_c = input('Insira um número: ')
@@ -31,8 +31,8 @@ while True:
             if N2 != 0:
                 print(f'{N1} / {N2} = {N1 / N2: .2f} e o resto é {N1%N2}')
             else:
-                print('Não se divide números por zero')
+                print('Não se pode dividir números por zero')
         else:
             print('Por favor, digite uma operação aritmética: adição, subtração, multiplicação ou divisão')
-    except:
-        print('Erro,insira números e operações válidos')
+    except Exception as error:
+        print(error)
