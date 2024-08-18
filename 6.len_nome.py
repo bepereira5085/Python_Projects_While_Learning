@@ -12,7 +12,7 @@ try:
     elif longo and nome.isalpha():
         print('Seu nome é muito longo')
     else:
-        print('Digite um nome apenas com letras e sem espaços')
+        print('Digite um nome apenas com letras e sem espaços, caso seja composto')
 except:
     print('ERRO')
 
