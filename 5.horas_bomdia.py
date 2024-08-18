@@ -2,6 +2,7 @@ try:
     nome = input('Insira seu nome: ')
     hora = input('Informe a hora atual: ')
 
+    hora = hora[0:2]
     hora_int = int(hora)
 
     bom_dia = hora_int >= 0 and hora_int <= 11
