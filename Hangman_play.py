@@ -1,4 +1,5 @@
-import random 
+import random
+import os
 
 try:
     
@@ -13,25 +14,27 @@ try:
             
             # O JOGO COMEÇA
         
-            possibilidades = 'bicicleta', 'joaquim', 'pizza', 'violao', 'jogador'\
-                            'fernando', 'pastel', 'ciclismo', 'gabriela', 'sorvete'\
-                            'camiseta', 'rodrigo', 'macarrao', 'corrida', 'renata'\
-                            'guitarra', 'alexandre', 'sanduiche', 'natalia', 'carro'\
-                            'cavalo', 'luiz', 'hamburguer', 'natacao', 'carolina'\
-                            'camisa', 'rafael', 'churrasco', 'skate', 'mariana'\
-                            'bola', 'pedro', 'sobremesa', 'tenis', 'daniel'\
-                            'futebol', 'alessandro', 'lasanha', 'basquete', 'juliana'\
-                            'gol', 'ricardo', 'sopa', 'surf', 'eduarda'\
+            possibilidades = 'bicicleta', 'joaquim', 'pizza', 'violao', 'jogador',\
+                            'fernando', 'pastel', 'ciclismo', 'gabriela', 'sorvete',\
+                            'camiseta', 'rodrigo', 'macarrao', 'corrida', 'renata',\
+                            'guitarra', 'alexandre', 'sanduiche', 'natalia', 'carro',\
+                            'cavalo', 'luiz', 'hamburguer', 'natacao', 'carolina',\
+                            'camisa', 'rafael', 'churrasco', 'skate', 'mariana',\
+                            'bola', 'pedro', 'sobremesa', 'tenis', 'daniel',\
+                            'futebol', 'alessandro', 'lasanha', 'basquete', 'juliana',\
+                            'gol', 'ricardo', 'sopa', 'surf', 'eduarda',\
                             'mochila', 'vinicius', 'caldo', 'karate', 'julia' 
-            n = random.randint(0, len(possibilidades) - 1)
+            n = random.randint(0, (len(possibilidades) - 1))
             palavra = possibilidades[n] #ESCOLHE A PALAVRA
             letras_salvas = ''
             letras_dig = ''
             tentativas = 0
 
             while True:
+                
                 print(' ')
                 letra = input('Digite uma letra: ')
+                os.system('cls')
                 palavra_form = ''
                 letras_salvas += (' ' + letra.upper()) 
 
