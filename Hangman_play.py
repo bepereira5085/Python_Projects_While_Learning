@@ -57,18 +57,13 @@ try:
                 if palavra_form == palavra:
                     print('Parabéns, você acertou!')
                     play_again = input('Deseja jogar novamente? ').lower()
-                    if play_again =='sim' or play_again == 's' or play_again == 'si ':
-                        continue
-                    else:
-                        break
-
+                    break
+                    
                 if  tentativas == 10:
                     print('Suas tentativas acabaram')
                     play_again = input('Deseja jogar novamente? ').lower()
-                    if play_again == 'não' or play_again == 'nao' or play_again == 'n':
-                        break
-                    else:
-                        continue
+                    break
+                    
             
         elif entrar == 'não' or entrar == 'nao' or entrar == 'n':
             break
@@ -76,7 +71,11 @@ try:
         else:
             print('Por favor, digite sim ou nao')
             continue
-        break
+
+        if play_again =='sim' or play_again == 's' or play_again == 'si ':
+            continue
+        if play_again == 'não' or play_again == 'nao' or play_again == 'n':
+            break
 
     print('Você saiu, até mais')
 
